@@ -1,0 +1,14 @@
+{
+  "name": "risk-radar-mcp",
+  "displayName": "Risk Radar MCP",
+  "version": "1.0.0",
+  "description": "Read-only access to TrustHub LMS banking data via OAuth",
+  "author": { "name": "TBX" },
+  "icon": "./src/static/icon.jpeg",
+  "mcpServers": {
+    "risk-radar-mcp": {
+      "type": "http",
+      "url": "https://mcp.trusthub.in/mcp"
+    }
+  }
+}
