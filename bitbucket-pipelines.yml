@@ -1,0 +1,20 @@
+image: python:3.12.15-slim-trixie@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+
+definitions:
+  steps:
+    - step: &test
+        name: pytest
+        script:
+          - pip install --no-cache-dir uv==0.11.31
+          - uv sync --locked --extra dev
+          - uv run --locked --extra dev pytest
+
+pipelines:
+  branches:
+    dev:
+      - step: *test
+    main:
+      - step: *test
+  pull-requests:
+    '**':
+      - step: *test
