@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Read-only access to TrustHub LMS banking data via OAuth",
   "author": { "name": "TBX" },
+  "homepage": "https://www.tbx.co.in/",
+  "privacyPolicyUrl": "https://www.tbx.co.in/legal/privacy-policy",
+  "termsOfServiceUrl": "https://www.tbx.co.in/legal/terms-and-conditions",
   "icon": "./src/static/icon.jpeg",
   "mcpServers": {
     "risk-radar-mcp": {
