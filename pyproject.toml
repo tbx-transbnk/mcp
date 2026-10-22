@@ -1,0 +1,24 @@
+[project]
+name = "lms-mcp"
+version = "0.1.0"
+description = "FastMCP server for TransBnk LMS"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp==4.0.5",
+    "httpx==0.28.1",
+    "redis>=8.1.0",
+    "python-dotenv>=1.2.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+lms-mcp = "src.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]

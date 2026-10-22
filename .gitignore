@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Credentials live in ~/.config/lms-mcp/, never here - but belt and braces.
+credentials.json
+*.env
+.env
+.claude/settings.local.json
